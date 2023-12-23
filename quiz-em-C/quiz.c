@@ -22,9 +22,6 @@ float temp, pont[10], multiplicador=0;
 int x, y, ajuda, classe, entergame, escolhamenu, categorias, dificuldade, stchdificuldade, stchcateg, quantAcerto, contPont=0;
 char tempChar[20], correta[10], nick[10][20], difSessao[10][20], respostaTecF;
 
-FILE *fp;
-
-
 int main(){
   setlocale(LC_ALL,"Portuguese");
   menuPrincipal();
@@ -61,11 +58,11 @@ void menuPrincipal(){
   Sleep(200);
   printf("\n\n ");
   printf("\n                                             [1] - INICIAR O JOGO ");
-  printf("\n                                             [2] -    CR…DITOS ");
+  printf("\n                                             [2] -    CR√âDITOS ");
   printf("\n                                             [3] -    RANKING ");
   printf("\n                                             [4] -     REGRAS ");
   printf("\n                                             [5] -      SAIR ");
-  printf("\n\n\n\n                                             OP«√O:  ");
+  printf("\n\n\n\n                                             OP√á√ÉO:  ");
 
   scanf("%d", &entergame);
   fflush(stdin);
@@ -105,12 +102,12 @@ void ranking(){
 	system("cls");
 	printf("                                             	     RANKING\n\n");
 	for(x=0;x<contPont;x++){
-		printf("        	 |           NICK: %s - PONTUA«√O: %.0f - DIFICULDADE: %s            \n\n",nick[x],pont[x],difSessao[x]);
+		printf("        	 |           NICK: %s - PONTUA√á√ÉO: %.0f - DIFICULDADE: %s            \n\n",nick[x],pont[x],difSessao[x]);
 		Sleep(200);
 	}
 	printf("        	 |           ");
 	printf("\n                                             [9] - RETORNAR AO MENU");
-    printf("\n\n                                                     OP«√O:  ");
+    printf("\n\n                                                     OP√á√ÉO:  ");
     scanf("%d", &escolhamenu);
     fflush(stdin);
     system("cls");
@@ -159,7 +156,7 @@ void creditos(){
  	Sleep(250);
 	printf("                            ********************************************************\n");
  	printf("\n                                             [9] - RETORNAR AO MENU");
-    printf("\n\n                                                     OP«√O:  ");
+    printf("\n\n                                                     OP√á√ÉO:  ");
     scanf("%d", &escolhamenu);
     fflush(stdin);
     system("cls");
@@ -186,7 +183,7 @@ void iniciarJogo(){
     printf("\n\n\n                                                     PLAYER - %s", nick[contPont]);
     printf("\n\n\n\n                                             [1] - DIFICULDADES");
     printf("\n                                             [9] - RETORNAR AO MENU");
-    printf("\n\n                                                     OP«√O:  ");
+    printf("\n\n                                                     OP√á√ÉO:  ");
     scanf("%d", &escolhamenu);
     fflush(stdin);
     switch(escolhamenu){
@@ -209,16 +206,16 @@ void regras(){
  	Sleep(200);
 	printf("                            *                                                      *\n");
   	Sleep(200);
-	printf("                            *    1 - TEMOS 3 DIFICULADES COM 10 QUEST’ES CADA;     *\n");
+	printf("                            *    1 - TEMOS 3 DIFICULADES COM 10 QUEST√ïES CADA;     *\n");
  	printf("                            *                                                      *\n");
 	Sleep(200);
-	printf("                            *    2 - A CADA PERGUNTA ACERTADA VOC  ACOMULA PONTOS  *\n");
+	printf("                            *    2 - A CADA PERGUNTA ACERTADA VOC√ä ACOMULA PONTOS  *\n");
  	Sleep(200);
 	printf("                            *        NO MULTIPLICADOR;                             *\n");
  	Sleep(200);
 	printf("                            *                                                      *\n");
  	Sleep(200);
-	printf("                            *    3 - A CADA PERGUNTA ERRADA VOC  PERDE PONTOS;     *\n");
+	printf("                            *    3 - A CADA PERGUNTA ERRADA VOC√ä PERDE PONTOS;     *\n");
  	Sleep(200);
 	printf("                            *                                                      *\n");
  	Sleep(200);
@@ -227,7 +224,7 @@ void regras(){
 	printf("                            ********************************************************\n");
  	Sleep(200);
 	printf("\n                                             [9] - RETORNAR AO MENU");
-    printf("\n\n                                                     OP«√O:  ");
+    printf("\n\n                                                     OP√á√ÉO:  ");
     scanf("%d", &escolhamenu);
     fflush(stdin);
     system("cls");
@@ -239,10 +236,10 @@ void menuDificuldade(){
         system("cls");
         dificuldade=0;
 		printf("\n\n\n                                                     ESCOLHA A DIFICULDADE:");
-        printf("\n\n                                                     [1] - F¡CIL");
-        printf("\n                                                     [2] - M…DIO");
-        printf("\n                                                     [3] - DIFÕCIL");
-        printf("\n\n                                                           OP«√O:  ");
+        printf("\n\n                                                     [1] - F√ÅCIL");
+        printf("\n                                                     [2] - M√âDIO");
+        printf("\n                                                     [3] - DIF√çCIL");
+        printf("\n\n                                                           OP√á√ÉO:  ");
         scanf("%d", &dificuldade);
         if(dificuldade>3){
         	dificuldade=0;
@@ -263,13 +260,13 @@ void menuDificuldade(){
             break;
         }
     }
-//-------------------------------------------QUEST’ES-------------------------------------------
+//-------------------------------------------QUEST√ïES-------------------------------------------
 void facilTec(){	
 	do{
 	fflush(stdin);	
 	system("cls");
-	printf("QUEST√O 1\n");
-	printf("Qual destes tipos de arquivo È comumente usado para armazenar m˙sica digital?");
+	printf("QUEST√ÉO 1\n");
+	printf("Qual destes tipos de arquivo √© comumente usado para armazenar m√∫sica digital?");
 	printf("\na) .PDF");
 	printf("\nb) .JPG");
 	printf("\nc) .MP3");
@@ -293,17 +290,17 @@ void facilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 2----------------------------------------
+//-------------------------------------------QUEST√ÉO 2----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 2\n");
-	printf("Qual empresa È mais conhecida por produzir o sistema operacional Android?");
+	printf("QUEST√ÉO 2\n");
+	printf("Qual empresa √© mais conhecida por produzir o sistema operacional Android?");
 	printf("\na) Apple");
 	printf("\nb) Microsoft");
 	printf("\nc) Google");
@@ -327,17 +324,17 @@ void facilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 3----------------------------------------
+//-------------------------------------------QUEST√ÉO 3----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 3\n");
-	printf("Quais desses tipos de configuraÁıes de email possuem a caracteristica de n„o fazer cÛpia dos emails enviados?");
+	printf("QUEST√ÉO 3\n");
+	printf("Quais desses tipos de configura√ß√µes de email possuem a caracteristica de n√£o fazer c√≥pia dos emails enviados?");
 	printf("\na) POP3 ");
 	printf("\nb) IMAP ");
 	printf("\nc) Exchange");
@@ -361,17 +358,17 @@ void facilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 4----------------------------------------
+//-------------------------------------------QUEST√ÉO 4----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 4\n");
-	printf("Qual destes serviÁos È amplamente utilizado para armazenar e sincronizar arquivos na nuvem?");
+	printf("QUEST√ÉO 4\n");
+	printf("Qual destes servi√ßos √© amplamente utilizado para armazenar e sincronizar arquivos na nuvem?");
 	printf("\na) Open VPN ");
 	printf("\nb) Endpoint ");
 	printf("\nc) VNCServer");
@@ -395,16 +392,16 @@ void facilTec(){
 			multiplicador=multiplicador+0.10;
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 5----------------------------------------
+//-------------------------------------------QUEST√ÉO 5----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 5\n");
+	printf("QUEST√ÉO 5\n");
 	printf("Como se chama o sistema operacional dos Macbooks da Apple?");
 	printf("\na) IOS ");
 	printf("\nb) MacOS  ");
@@ -429,16 +426,16 @@ void facilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 6----------------------------------------
+//-------------------------------------------QUEST√ÉO 6----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 6\n");
+	printf("QUEST√ÉO 6\n");
 	printf("Qual a principal linguagem utilizada para front-end?");
 	printf("\na) Python ");
 	printf("\nb) CSS  ");
@@ -463,17 +460,17 @@ void facilTec(){
 			multiplicador=multiplicador+0.05;
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 7----------------------------------------
+//-------------------------------------------QUEST√ÉO 7----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 7\n");
-	printf("Qual termo descreve a pr·tica de enviar e-mails fraudulentos na tentativa de enganar as pessoas?");
+	printf("QUEST√ÉO 7\n");
+	printf("Qual termo descreve a pr√°tica de enviar e-mails fraudulentos na tentativa de enganar as pessoas?");
 	printf("\na) Phishing  ");
 	printf("\nb) Spam ");
 	printf("\nc) Streaming");
@@ -497,21 +494,21 @@ void facilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 8----------------------------------------
+//-------------------------------------------QUEST√ÉO 8----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 8\n");
-	printf("Qual È a principal diferenÁa entre um disco rÌgido (HD) e um disco de estado sÛlido (SSD)?");
+	printf("QUEST√ÉO 8\n");
+	printf("Qual √© a principal diferen√ßa entre um disco r√≠gido (HD) e um disco de estado s√≥lido (SSD)?");
 	printf("\na) Velocidade de leitura  ");
 	printf("\nb) Capacidade de armazenamento ");
-	printf("\nc) Tipo de conex„o");
-	printf("\nd) MÈtodo de gravaÁ„o\n");
+	printf("\nc) Tipo de conex√£o");
+	printf("\nd) M√©todo de grava√ß√£o\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -531,19 +528,19 @@ void facilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 9----------------------------------------
+//-------------------------------------------QUEST√ÉO 9----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 9\n");
-	printf("O que È a programaÁ„o orientada a objetos?");
-	printf("\na) Um tipo de linguagem de programaÁ„o  ");
-	printf("\nb) Um paradigma de programaÁ„o ");
+	printf("QUEST√ÉO 9\n");
+	printf("O que √© a programa√ß√£o orientada a objetos?");
+	printf("\na) Um tipo de linguagem de programa√ß√£o  ");
+	printf("\nb) Um paradigma de programa√ß√£o ");
 	printf("\nc) Um sistema operacional");
 	printf("\nd) Um tipo de hardware\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
@@ -565,16 +562,16 @@ void facilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 10----------------------------------------
+//-------------------------------------------QUEST√ÉO 10----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 10\n");
+	printf("QUEST√ÉO 10\n");
 	printf("O que significa a sigla VPN?");
 	printf("\na) Virtual Private Network  ");
 	printf("\nb) Very Personal Navigator ");
@@ -599,7 +596,7 @@ void facilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
@@ -610,16 +607,16 @@ void facilTec(){
 
 
 void medioTec(){
-//-------------------------------------------QUEST√O 1----------------------------------------
+//-------------------------------------------QUEST√ÉO 1----------------------------------------
 	do{
 	fflush(stdin);
 	system("cls");
-	printf("QUEST√O 1\n");
-	printf("Qual È a diferenÁa entre um ataque de phishing e um ataque de ransomware?");
-	printf("\na) Phishing È exclusivamente direcionado a dispositivos mÛveis, enquanto ransomware atinge computadores pessoais.");
-	printf("\nb) Phishing È um ataque de negaÁ„o de serviÁo, e ransomware È um ataque de interceptaÁ„o de dados.");
-	printf("\nc) Phishing envolve enganar as pessoas para obter informaÁıes confidenciais, enquanto ransomware criptografa dados e exige resgate.");
-	printf("\nd) Phishing È um tipo de vÌrus de computador, e ransomware È uma tÈcnica de hacking.\n");
+	printf("QUEST√ÉO 1\n");
+	printf("Qual √© a diferen√ßa entre um ataque de phishing e um ataque de ransomware?");
+	printf("\na) Phishing √© exclusivamente direcionado a dispositivos m√≥veis, enquanto ransomware atinge computadores pessoais.");
+	printf("\nb) Phishing √© um ataque de nega√ß√£o de servi√ßo, e ransomware √© um ataque de intercepta√ß√£o de dados.");
+	printf("\nc) Phishing envolve enganar as pessoas para obter informa√ß√µes confidenciais, enquanto ransomware criptografa dados e exige resgate.");
+	printf("\nd) Phishing √© um tipo de v√≠rus de computador, e ransomware √© uma t√©cnica de hacking.\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -639,20 +636,20 @@ void medioTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 2----------------------------------------
+//-------------------------------------------QUEST√ÉO 2----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 2\n");
-	printf("O que È um firewall em termos de seguranÁa de rede?");
-	printf("\na) Um software que protege contra vÌrus de computador  ");
-	printf("\nb) Um dispositivo que impede o acesso n„o autorizado ‡ rede ");
-	printf("\nc) Um protocolo de criptografia para comunicaÁ„o segura");
+	printf("QUEST√ÉO 2\n");
+	printf("O que √© um firewall em termos de seguran√ßa de rede?");
+	printf("\na) Um software que protege contra v√≠rus de computador  ");
+	printf("\nb) Um dispositivo que impede o acesso n√£o autorizado √† rede ");
+	printf("\nc) Um protocolo de criptografia para comunica√ß√£o segura");
 	printf("\nd) Uma ferramenta para monitoramento de largura de banda\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
@@ -673,21 +670,21 @@ void medioTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 3----------------------------------------
+//-------------------------------------------QUEST√ÉO 3----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 3\n");
-	printf("Em redes de computadores, qual È a funÁ„o do protocolo TCP?");
+	printf("QUEST√ÉO 3\n");
+	printf("Em redes de computadores, qual √© a fun√ß√£o do protocolo TCP?");
 	printf("\na) Roteamento de pacotes  ");
-	printf("\nb) Controle de congestionamento e transmiss„o confi·vel ");
+	printf("\nb) Controle de congestionamento e transmiss√£o confi√°vel ");
 	printf("\nc) Descoberta de dispositivos na rede");
-	printf("\nd) EndereÁamento IP\n");
+	printf("\nd) Endere√ßamento IP\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -707,19 +704,19 @@ void medioTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 4----------------------------------------
+//-------------------------------------------QUEST√ÉO 4----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 4\n");
-	printf("Qual È o propÛsito de um servidor DNS?");
+	printf("QUEST√ÉO 4\n");
+	printf("Qual √© o prop√≥sito de um servidor DNS?");
 	printf("\na) Navegar na internet  ");
-	printf("\nb) Converter endereÁos IP em nomes de domÌnio ");
+	printf("\nb) Converter endere√ßos IP em nomes de dom√≠nio ");
 	printf("\nc) Armazenar arquivos de sistema operacional");
 	printf("\nd) Proteger contra malware\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
@@ -741,22 +738,22 @@ void medioTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
 
-//-------------------------------------------QUEST√O 5----------------------------------------
+//-------------------------------------------QUEST√ÉO 5----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 5\n");
-	printf("O que È o termo ''cloud computing'' (computaÁ„o em nuvem)?");
-	printf("\na) Um tipo de programa antivÌrus");
-	printf("\nb) Um mÈtodo de resfriamento de hardware");
-	printf("\nc) Um modelo de entrega de serviÁos pela internet");
-	printf("\nd) Uma tÈcnica de programaÁ„o de jogos\n");
+	printf("QUEST√ÉO 5\n");
+	printf("O que √© o termo ''cloud computing'' (computa√ß√£o em nuvem)?");
+	printf("\na) Um tipo de programa antiv√≠rus");
+	printf("\nb) Um m√©todo de resfriamento de hardware");
+	printf("\nc) Um modelo de entrega de servi√ßos pela internet");
+	printf("\nd) Uma t√©cnica de programa√ß√£o de jogos\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -776,21 +773,21 @@ void medioTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 6----------------------------------------
+//-------------------------------------------QUEST√ÉO 6----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 6\n");
-	printf("Qual È a funÁ„o principal de um firewall em um sistema de computador?");
+	printf("QUEST√ÉO 6\n");
+	printf("Qual √© a fun√ß√£o principal de um firewall em um sistema de computador?");
 	printf("\na) Melhorar o desempenho da CPU ");
 	printf("\nb) Otimizar a velocidade da internet  ");
 	printf("\nc) Ampliar a capacidade de armazenamento ");
-	printf("\nd) Proteger contra ameaÁas de seguranÁa na rede\n");
+	printf("\nd) Proteger contra amea√ßas de seguran√ßa na rede\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -810,21 +807,21 @@ void medioTec(){
 			multiplicador=multiplicador+0.05;
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 7----------------------------------------
+//-------------------------------------------QUEST√ÉO 7----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 7\n");
-	printf("O que È um banco de dados relacional?");
+	printf("QUEST√ÉO 7\n");
+	printf("O que √© um banco de dados relacional?");
 	printf("\na) Um banco de dados sem tabelas");
-	printf("\nb) Um banco de dados hier·rquico");
+	printf("\nb) Um banco de dados hier√°rquico");
 	printf("\nc) Um banco de dados com tabelas interligadas");
-	printf("\nd) Um banco de dados distribuÌdo\n");
+	printf("\nd) Um banco de dados distribu√≠do\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -844,21 +841,21 @@ void medioTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 8----------------------------------------
+//-------------------------------------------QUEST√ÉO 8----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 8\n");
-	printf("O que È um backup incremental em termos de seguranÁa da informaÁ„o?");
-	printf("\na) Um backup que inclui apenas os arquivos alterados desde o ˙ltimo backup  ");
-	printf("\nb) Um backup que È executado automaticamente a cada hora ");
+	printf("QUEST√ÉO 8\n");
+	printf("O que √© um backup incremental em termos de seguran√ßa da informa√ß√£o?");
+	printf("\na) Um backup que inclui apenas os arquivos alterados desde o √∫ltimo backup  ");
+	printf("\nb) Um backup que √© executado automaticamente a cada hora ");
 	printf("\nc) Um backup que salva todo o sistema em intervalos regulares");
-	printf("\nd) Um backup que È armazenado em uma localizaÁ„o externa ‡ rede\n");
+	printf("\nd) Um backup que √© armazenado em uma localiza√ß√£o externa √† rede\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -878,21 +875,21 @@ void medioTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 9----------------------------------------
+//-------------------------------------------QUEST√ÉO 9----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 9\n");
-	printf("O que È um ataque de forÁa bruta em seguranÁa de senha?");
-	printf("\na) Um ataque que utiliza mÈtodos complexos de criptografia para quebrar senhas  ");
-	printf("\nb) Uma tentativa de adivinhar uma senha testando todas as combinaÁıes possÌveis ");
-	printf("\nc) Um ataque que manipula as configuraÁıes de firewall para obter acesso");
-	printf("\nd) Uma tÈcnica que explora falhas em algoritmos de criptografia\n");
+	printf("QUEST√ÉO 9\n");
+	printf("O que √© um ataque de for√ßa bruta em seguran√ßa de senha?");
+	printf("\na) Um ataque que utiliza m√©todos complexos de criptografia para quebrar senhas  ");
+	printf("\nb) Uma tentativa de adivinhar uma senha testando todas as combina√ß√µes poss√≠veis ");
+	printf("\nc) Um ataque que manipula as configura√ß√µes de firewall para obter acesso");
+	printf("\nd) Uma t√©cnica que explora falhas em algoritmos de criptografia\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -912,21 +909,21 @@ void medioTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 10----------------------------------------
+//-------------------------------------------QUEST√ÉO 10----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 10\n");
-	printf("Em redes de computadores, qual È a funÁ„o do protocolo TCP?");
-	printf("\na) Controle de congestionamento e transmiss„o confi·vel  ");
+	printf("QUEST√ÉO 10\n");
+	printf("Em redes de computadores, qual √© a fun√ß√£o do protocolo TCP?");
+	printf("\na) Controle de congestionamento e transmiss√£o confi√°vel  ");
 	printf("\nb) Roteamento de pacotes ");
 	printf("\nc) Descoberta de dispositivos na rede");
-	printf("\nd) EndereÁamento IP\n");
+	printf("\nd) Endere√ßamento IP\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -946,7 +943,7 @@ void medioTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
@@ -959,12 +956,12 @@ void dificilTec(){
 	do{
 	fflush(stdin);	
 	system("cls");
-	printf("QUEST√O 1\n");
-	printf("Quando foi lanÁado o sistema operacional Unix e qual foi o seu principal objetivo inicial?");
+	printf("QUEST√ÉO 1\n");
+	printf("Quando foi lan√ßado o sistema operacional Unix e qual foi o seu principal objetivo inicial?");
 	printf("\na) 1970; Suporte a jogos");
-	printf("\nb) 1985; Interface gr·fica de usu·rio");
-	printf("\nc) 1969; Suporte a aplicaÁıes comerciais");
-	printf("\nd) 1995; IntegraÁ„o de dispositivos mÛveis\n");
+	printf("\nb) 1985; Interface gr√°fica de usu√°rio");
+	printf("\nc) 1969; Suporte a aplica√ß√µes comerciais");
+	printf("\nd) 1995; Integra√ß√£o de dispositivos m√≥veis\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -984,21 +981,21 @@ void dificilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 2----------------------------------------
+//-------------------------------------------QUEST√ÉO 2----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 2\n");
-	printf("O que È um sistema de arquivos distribuÌdo e qual È sua finalidade?");
+	printf("QUEST√ÉO 2\n");
+	printf("O que √© um sistema de arquivos distribu√≠do e qual √© sua finalidade?");
 	printf("\na) Um sistema que organiza arquivos em discos locais para melhor desempenho  ");
-	printf("\nb) Um sistema que permite o compartilhamento de arquivos entre diferentes computadores atravÈs de uma rede ");
-	printf("\nc) Um sistema que comprime arquivos para economizar espaÁo de armazenamento");
-	printf("\nd) Um sistema que protege arquivos por meio de criptografia avanÁada\n");
+	printf("\nb) Um sistema que permite o compartilhamento de arquivos entre diferentes computadores atrav√©s de uma rede ");
+	printf("\nc) Um sistema que comprime arquivos para economizar espa√ßo de armazenamento");
+	printf("\nd) Um sistema que protege arquivos por meio de criptografia avan√ßada\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -1018,17 +1015,17 @@ void dificilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 3----------------------------------------
+//-------------------------------------------QUEST√ÉO 3----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 3\n");
-	printf("Quando foi lanÁado o primeiro smartphone e qual empresa foi respons·vel por sua introduÁ„o no mercado?");
+	printf("QUEST√ÉO 3\n");
+	printf("Quando foi lan√ßado o primeiro smartphone e qual empresa foi respons√°vel por sua introdu√ß√£o no mercado?");
 	printf("\na) 2007; Apple");
 	printf("\nb) 1999; Samsung");
 	printf("\nc) 2003; Google");
@@ -1052,21 +1049,21 @@ void dificilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 4----------------------------------------
+//-------------------------------------------QUEST√ÉO 4----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 4\n");
-	printf("Quando ocorreu o ataque de vÌrus Stuxnet e qual foi seu alvo principal?");
+	printf("QUEST√ÉO 4\n");
+	printf("Quando ocorreu o ataque de v√≠rus Stuxnet e qual foi seu alvo principal?");
 	printf("\na) 2005; Redes sociais");
 	printf("\nb) 2010; Infraestrutura nuclear iraniana");
-	printf("\nc) 1998; InstituiÁıes financeiras globais");
-	printf("\nd) 2015; Sistemas de controle de tr·fego aÈreo\n");
+	printf("\nc) 1998; Institui√ß√µes financeiras globais");
+	printf("\nd) 2015; Sistemas de controle de tr√°fego a√©reo\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -1086,21 +1083,21 @@ void dificilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 5----------------------------------------
+//-------------------------------------------QUEST√ÉO 5----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 5\n");
-	printf("O que È a arquitetura de computaÁ„o em nuvem e como ela difere da infraestrutura tradicional?");
+	printf("QUEST√ÉO 5\n");
+	printf("O que √© a arquitetura de computa√ß√£o em nuvem e como ela difere da infraestrutura tradicional?");
 	printf("\na) Uma arquitetura que utiliza servidores locais para processamento intensivo");
-	printf("\nb) Uma abordagem que depende exclusivamente de dispositivos mÛveis para armazenamento de dados");
-	printf("\nc) Um modelo em que os recursos de computaÁ„o s„o fornecidos pela internet, sob demanda");
-	printf("\nd) Uma estrutura que utiliza apenas hardware dedicado para cada aplicaÁ„o\n");
+	printf("\nb) Uma abordagem que depende exclusivamente de dispositivos m√≥veis para armazenamento de dados");
+	printf("\nc) Um modelo em que os recursos de computa√ß√£o s√£o fornecidos pela internet, sob demanda");
+	printf("\nd) Uma estrutura que utiliza apenas hardware dedicado para cada aplica√ß√£o\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -1120,21 +1117,21 @@ void dificilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 6----------------------------------------
+//-------------------------------------------QUEST√ÉO 6----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 6\n");
-	printf("O que È a tecnologia de contÍineres e qual È sua principal vantagem em relaÁ„o ‡ virtualizaÁ„o tradicional?");
-	printf("\na) Uma tecnologia para compactaÁ„o de arquivos ");
-	printf("\nb) Um sistema para otimizaÁ„o de consumo de energia em data centers ");
-	printf("\nc) Um protocolo para transferÍncia r·pida de dados entre servidores ");
-	printf("\nd) Um mÈtodo para isolamento de processos em sistemas operacionais\n");
+	printf("QUEST√ÉO 6\n");
+	printf("O que √© a tecnologia de cont√™ineres e qual √© sua principal vantagem em rela√ß√£o √† virtualiza√ß√£o tradicional?");
+	printf("\na) Uma tecnologia para compacta√ß√£o de arquivos ");
+	printf("\nb) Um sistema para otimiza√ß√£o de consumo de energia em data centers ");
+	printf("\nc) Um protocolo para transfer√™ncia r√°pida de dados entre servidores ");
+	printf("\nd) Um m√©todo para isolamento de processos em sistemas operacionais\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -1154,21 +1151,21 @@ void dificilTec(){
 			multiplicador=multiplicador+0.10;
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 7----------------------------------------
+//-------------------------------------------QUEST√ÉO 7----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 7\n");
-	printf("O que È a Realidade Virtual (VR) e como ela È aplicada na ind˙stria de jogos");
-	printf("\na) Um modelo de monetizaÁ„o utilizado por desenvolvedores de jogos independentes");
-	printf("\nb) Uma tecnologia que simula um ambiente tridimensional e È utilizada para criar experiÍncias imersivas em jogos");
-	printf("\nc) Uma tÈcnica de design de personagens que torna os modelos mais realistas");
-	printf("\nd) Um sistema de seguranÁa utilizado para proteger os servidores de jogos online\n");
+	printf("QUEST√ÉO 7\n");
+	printf("O que √© a Realidade Virtual (VR) e como ela √© aplicada na ind√∫stria de jogos");
+	printf("\na) Um modelo de monetiza√ß√£o utilizado por desenvolvedores de jogos independentes");
+	printf("\nb) Uma tecnologia que simula um ambiente tridimensional e √© utilizada para criar experi√™ncias imersivas em jogos");
+	printf("\nc) Uma t√©cnica de design de personagens que torna os modelos mais realistas");
+	printf("\nd) Um sistema de seguran√ßa utilizado para proteger os servidores de jogos online\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -1188,17 +1185,17 @@ void dificilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 8----------------------------------------
+//-------------------------------------------QUEST√ÉO 8----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 8\n");
-	printf("Qual foi o primeiro console de videogame a ser lanÁado comercialmente e em que ano isso aconteceu?");
+	printf("QUEST√ÉO 8\n");
+	printf("Qual foi o primeiro console de videogame a ser lan√ßado comercialmente e em que ano isso aconteceu?");
 	printf("\na) Nintendo Entertainment System (NES) em 1985");
 	printf("\nb) Atari 2600 em 1977");
 	printf("\nc) Magnavox Odyssey em 1972");
@@ -1222,21 +1219,21 @@ void dificilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 9----------------------------------------
+//-------------------------------------------QUEST√ÉO 9----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 9\n");
-	printf("O que È a tecnologia Li-Fi em relaÁ„o a smartphones e redes de comunicaÁ„o?");
-	printf("\na) Uma tecnologia de exibiÁ„o hologr·fica em tempo real");
-	printf("\nb) Um mÈtodo de recarga sem fio usando luz visÌvel ");
-	printf("\nc) Um protocolo de seguranÁa avanÁado para transmiss„o de dados");
-	printf("\nd) Um sistema de localizaÁ„o por GPS de alta precis„o\n");
+	printf("QUEST√ÉO 9\n");
+	printf("O que √© a tecnologia Li-Fi em rela√ß√£o a smartphones e redes de comunica√ß√£o?");
+	printf("\na) Uma tecnologia de exibi√ß√£o hologr√°fica em tempo real");
+	printf("\nb) Um m√©todo de recarga sem fio usando luz vis√≠vel ");
+	printf("\nc) Um protocolo de seguran√ßa avan√ßado para transmiss√£o de dados");
+	printf("\nd) Um sistema de localiza√ß√£o por GPS de alta precis√£o\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
 	scanf("%c", &respostaTecF);
 	respostaTecF=tolower(respostaTecF);
@@ -1256,19 +1253,19 @@ void dificilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
 	system("pause");
 	fflush(stdin);
-//-------------------------------------------QUEST√O 10----------------------------------------
+//-------------------------------------------QUEST√ÉO 10----------------------------------------
 	do{
 	system("cls");
-	printf("QUEST√O 10\n");
-	printf("Qual È a diferenÁa fundamental entre um display AMOLED e um display LCD em smartphones?");
-	printf("\na) A tecnologia de retroiluminaÁ„o");
-	printf("\nb) A capacidade de reproduÁ„o de cores");
+	printf("QUEST√ÉO 10\n");
+	printf("Qual √© a diferen√ßa fundamental entre um display AMOLED e um display LCD em smartphones?");
+	printf("\na) A tecnologia de retroilumina√ß√£o");
+	printf("\nb) A capacidade de reprodu√ß√£o de cores");
 	printf("\nc) O consumo de energia");
 	printf("\nd) A espessura do display\n");
 	printf("\n\n\n\n                                             RESPOSTA:  ");
@@ -1290,7 +1287,7 @@ void dificilTec(){
 			printf("RESPOSTA ERRADA:(     \n");
 			break;
 		default:
-      		printf("                                             TECLA INV¡LIDA, DIGITE NOVAMENTE: \n");
+      		printf("                                             TECLA INV√ÅLIDA, DIGITE NOVAMENTE: \n");
       		Sleep(250);
 	}
 	}while((respostaTecF!='a') && (respostaTecF!='b') && (respostaTecF!='c') && (respostaTecF!='d'));
@@ -1307,14 +1304,11 @@ void acertos(){
 	system("cls");
 	pont[contPont]=1000*multiplicador;
 	
-	printf("VOC  ACERTOU %d QUEST’ES\n", quantAcerto);
-	printf("\nPONTUA«√O ALCAN«ADA: %.0f\n", pont[contPont]);
+	printf("VOC√ä ACERTOU %d QUEST√ïES\n", quantAcerto);
+	printf("\nPONTUA√á√ÉO ALCAN√áADA: %.0f\n", pont[contPont]);
 	contPont++;
 	system("pause");
 	menuPrincipal();
-	
-	fputs(fp,nick[contPont]);
-	
 }
 
 
